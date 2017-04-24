@@ -1,0 +1,179 @@
+//*Esta es una pequena libreria para leer datos *//
+
+import java.io.*;
+
+public class Datos
+{
+	private BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
+	
+	public byte Bytes (String msg)
+	{
+		byte x=0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=Byte.parseByte(obj.readLine().trim());
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		catch(NumberFormatException e)
+		{
+			x=this.Bytes(msg);
+		}
+		
+		return x;
+	}
+	
+	public short Corto (String msg)
+	{
+		short x=0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=Short.parseShort(obj.readLine().trim());
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		catch(NumberFormatException e)
+		{
+			x=this.Corto(msg);
+		}
+		
+		return x;
+	}
+	
+	
+	public int Entero (String msg)
+	{
+		int x=0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=Integer.parseInt(obj.readLine().trim());
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		catch(NumberFormatException e)
+		{
+			x=this.Entero(msg);
+		}
+		
+		return x;
+	}
+	
+	
+	public long Largo (String msg)
+	{
+		long x=0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=Long.parseLong(obj.readLine().trim());
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		catch(NumberFormatException e)
+		{
+			x=this.Largo(msg);
+		}
+		
+		return x;
+	}
+	
+	public float Flotante (String msg)
+	{
+		float x=(float) 0.0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=Float.parseFloat(obj.readLine().trim());
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		catch(NumberFormatException e)
+		{
+			x=this.Flotante(msg);
+		}
+		
+		return x;
+	}
+	
+	public double Doble (String msg)
+	{
+		double x=0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=Double.parseDouble(obj.readLine().trim());
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		catch(NumberFormatException e)
+		{
+			x=this.Doble(msg);
+		}
+		
+		return x;
+	}
+	
+	public char Caracter (String msg)
+	{
+		char x=0;
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=obj.readLine().trim().charAt(0);
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		
+		return x;
+	}
+	
+	public String Cadena (String msg)
+	{
+		String x="";
+		
+		try
+		{
+			System.out.print(msg +" ");
+			x=obj.readLine().trim();
+					
+		}
+		catch(IOException e)
+		{
+			System.out.print("Error en el dispositivo");
+		}
+		
+		return x;
+	}
+	
+}
